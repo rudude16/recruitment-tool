@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const competitiveCoding = axios.create({
+const coding = axios.create({
   baseURL: "https://competitive-coding-api.herokuapp.com/api/",
 });
 
-module.exports = competitiveCoding;
+module.exports = coding;
