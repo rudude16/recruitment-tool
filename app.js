@@ -3,12 +3,16 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const dotenv = require("dotenv");
 
 var indexRouter = require("./routes/apis/index");
 var usersRouter = require("./routes/apis/user");
 var candidateRouter = require("./routes/apis/candidate");
 
 var app = express();
+dotenv.config({ path: "./config.env" });
+// execute the database file.
+require("./db/mongo");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -17,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/api/user", usersRouter);
 app.use("/api/candidate", candidateRouter);
 
 // catch 404 and forward to error handler
@@ -36,10 +40,6 @@ app.use(function (err, req, res, next) {
   res.json({
     error: "error",
   });
-});
-
-app.listen(3001, () => {
-  console.log("Server is up and running!");
 });
 
 module.exports = app;

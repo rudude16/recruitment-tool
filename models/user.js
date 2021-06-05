@@ -52,7 +52,7 @@ userSchema.methods.generateAuth = async function () {
 
 // Login the user with given emailid and password. If no user is found or password is not matched throw error
 userSchema.statics.login = async (email, password) => {
-  const user = await user.findOne({ email: email });
+  const user = await User.findOne({ email: email });
   if (!user) throw new Error("Unable to Login!");
   if (bcrypt.compare(user.password, password)) {
     return user;
@@ -68,6 +68,6 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-const user = mongoose.model("user", userSchema);
+const User = mongoose.model("User", userSchema);
 
-module.exports = user;
+module.exports = User;
