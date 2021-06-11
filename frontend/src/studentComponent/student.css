@@ -1,0 +1,70 @@
+.card {
+    /* Add shadows to create the "card" effect */
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top: 30px;
+
+}
+  
+  /* On mouse-over, add a deeper shadow */
+  .codeforces:hover {
+    box-shadow: 0 12px 20px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  .cfcontainer {
+    text-align: center;
+  }
+  /* ************codeforces********************** */
+
+  .codeforces {
+    /* Add shadows to create the "card" effect */
+
+    
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color:darkgreen;
+    will-change: 100px;
+    height: 260px;
+    width: 300px;
+    float: left;
+    padding: 20px
+
+  }
+
+  
+  /* On mouse-over, add a deeper shadow */
+  .codeforces:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .cfcontainer {
+    padding: 2px 16px;
+  }
+
+
+#codechef{
+    margin-left: 25px;
+}
+
+#card2{
+    margin-top: 20px;
+}
+
+#cf{
+margin-left: 20px;
+}
+
+#card2{
+  position:relative;
+  top:15px;
+
+}
+
+  
